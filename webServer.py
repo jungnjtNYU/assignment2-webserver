@@ -32,6 +32,8 @@ def webServer(port=13331):
 
       #This variable can store the headers you want to send for any valid or invalid request.   What header should be sent for a response that is ok?    
       header = b"HTTP/1.1 200 OK\r\n"
+      header += b"Server: SimplePythonServer\r\n"
+      header += b"Connection: close\r\n"
               
       #Content-Type is an example on how to send a header as bytes. There are more!
       outputdata = b"Content-Type: text/html; charset=UTF-8\r\n"
